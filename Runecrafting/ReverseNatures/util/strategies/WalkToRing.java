@@ -3,8 +3,6 @@ package util.strategies;
 import org.powerbot.concurrent.strategy.Strategy;
 import org.powerbot.game.api.methods.Walking;
 import org.powerbot.game.api.methods.node.SceneEntities;
-import org.powerbot.game.api.wrappers.Tile;
-import org.powerbot.game.api.wrappers.map.TilePath;
 import org.powerbot.game.api.wrappers.node.SceneObject;
 
 import util.Constants;
