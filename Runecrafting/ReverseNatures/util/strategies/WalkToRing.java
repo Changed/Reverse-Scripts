@@ -10,9 +10,6 @@ import util.Constants;
 
 public class WalkToRing extends Strategy implements Runnable {
 	
-	Tile[] TO_RING = new Tile[] {new Tile(0000,0000,0), new Tile(0000,0000,0)};
-	TilePath toRing = new TilePath(TO_RING);
-	
 	@Override
 	public boolean validate() {
 		SceneObject fairyRing = SceneEntities.getNearest(Constants.TZ_HAAR_FAIRY_RING);
@@ -22,7 +19,7 @@ public class WalkToRing extends Strategy implements Runnable {
 	
 	@Override
 	public void run() {
-		toRing.traverse();
+		Constants.toRing.traverse();
 	}
 
 }
