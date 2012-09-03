@@ -14,8 +14,7 @@ public class WalkToRing extends Strategy implements Runnable {
 	@Override
 	public boolean validate() {
 		SceneObject fairyRing = SceneEntities.getNearest(Constants.TZ_HAAR_FAIRY_RING);
-		SceneObject BANKER = SceneEntities.getNearest(Constants.BANKER);
-		return fairyRing != null && !fairyRing.isOnScreen() && BANKER != null;
+		return fairyRing != null && !fairyRing.isOnScreen();
 	}
 	
 	@Override
