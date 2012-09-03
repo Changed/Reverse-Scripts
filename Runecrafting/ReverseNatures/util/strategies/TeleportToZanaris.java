@@ -14,7 +14,7 @@ public class TeleportToZanaris extends Strategy implements Runnable {
 	@Override
 	public boolean validate() {
 		SceneObject fairyRing = SceneEntities.getNearest(Constants.TZ_HAAR_FAIRY_RING);
-		return fairyRing != null && fairyRing.isOnScreen();
+		return fairyRing != null && fairyRing.isOnScreen() ;
 	}
 	
 	@Override
