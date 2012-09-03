@@ -5,17 +5,27 @@ import org.powerbot.game.api.ActiveScript;
 import org.powerbot.game.api.Manifest;
 import org.powerbot.game.bot.event.listener.PaintListener;
 
-@Manifest(authors = { "Changed", "ArcaneSanity" }, name = "Reverse Natures")
+import util.strategies.Banking;
+import util.strategies.WalkToRing;
+
+@Manifest
+(authors = { "Changed", "ArcaneSanity" }, 
+name = "Reverse Natures",
+version = 0.01,
+description = "",
+website = "http://www.powerbot.org/community")
+
 public class ReverseNatures extends ActiveScript implements PaintListener {
 
 	@Override
-	public void onRepaint(Graphics render) {
-		Graphics2D g = (Graphics2D) render;
+	protected void setup() {
+		provide(new Banking());
+		provide(new WalkToRing());
 	}
 
 	@Override
-	protected void setup() {
-		
+	public void onRepaint(Graphics g2d) {
+		Graphics2D g = (Graphics2D) g2d;
 	}
-
+	
 }
