@@ -7,4 +7,5 @@ public class Constants {
 	public static final int KARAMJA_FAIRY_RING = 14130;
 	public static final int NATURE_RUINS = 2460;
 	public static final int NATURE_ALTAR = 2486;
+	public static final int BANKER = 2617;
 }
