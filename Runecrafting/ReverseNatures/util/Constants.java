@@ -1,5 +1,7 @@
 package util;
 
+import org.powerbot.game.api.wrappers.Tile;
+
 public class Constants {
 	public static final int TOKKUL_ZO = 23643;
 	public static final int TZ_HAAR_FAIRY_RING = 68234;
