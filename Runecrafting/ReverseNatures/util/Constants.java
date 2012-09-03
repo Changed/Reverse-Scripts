@@ -11,7 +11,5 @@ public class Constants {
 	public static final int NATURE_RUNE = 561;
 	public static final int ESSENCE = 7936;
 	
-	Tile[] TO_RING = new Tile[] {new Tile(0000,0000,0), new Tile(0000,0000,0)};
-	TilePath toRing = new TilePath(TO_RING);
-	
+	public static final Tile[] TO_RING = {new Tile(0000,0000,0), new Tile(0000,0000,0)};	
 }
