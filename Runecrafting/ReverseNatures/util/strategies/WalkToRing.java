@@ -19,7 +19,7 @@ public class WalkToRing extends Strategy implements Runnable {
 	
 	@Override
 	public void run() {
-		Constants.toRing.traverse();
+		Walking.newTilePath(Constants.TO_RING).traverse();
 	}
 
 }
