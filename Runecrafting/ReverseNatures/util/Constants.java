@@ -12,6 +12,7 @@ public class Constants {
 	public static final int BANKER = 2617;
 	public static final int NATURE_RUNE = 561;
 	public static final int ESSENCE = 7936;
+	public static final int[] DEGRADED_POUCHES = { 5515, 5513, 5511 };
 	
 	public static final Tile[] TO_RING = {new Tile(0000,0000,0), new Tile(0000,0000,0)};	
 }
