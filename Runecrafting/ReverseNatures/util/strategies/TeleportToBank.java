@@ -17,7 +17,7 @@ public class TeleportToBank extends Strategy implements Runnable {
 
 	@Override
 	public boolean validate() {
-		return SceneEntities.getNearest(Constants.NATURE_ALTAR) != null && !PouchHandler.allFull() 
+		return SceneEntities.getNearest(Constants.NATURE_ALTAR) != null && PouchHandler.allEmpty() 
 				&& !Inventory.contains(Constants.PURE_ESSENCE);
 	}
 
