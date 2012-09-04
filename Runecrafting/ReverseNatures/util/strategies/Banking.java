@@ -13,29 +13,24 @@ import util.PouchHandler;
 
 public class Banking extends Strategy implements Runnable {
 
-	@Override
+@Override
 	public boolean validate() {
-		NPC banker = NPCs.getNearest(Constants.BANKER);
-		return banker != null && !PouchHandler.allFull();
+		return NPCs.getNearest(Constants.BANKER) != null && !PouchHandler.allFull() 
+		&& !Inventory.isFull() && !Inventory.contains(Constants.PURE_ESSENCE);
 	}
 	
 	@Override
 	public void run() {
-		NPC banker = NPCs.getNearest(Constants.BANKER);
-		if (Bank.isOpen()) {
-			
-		} else {
-			if (banker != null) {
-				if (banker.isOnScreen()) {
-					if (!Players.getLocal().isMoving()) {
-						banker.interact("Bank",banker.getName());
-						Time.sleep(1000);
-					}
-				} else {
-					Camera.turnTo(banker);
-				}
-			}
-		}
-	}
+	    if(!Bank.isOpen()) {
+	         NPC banker = NPCs.getNearest(Constants.BANKER);
+	         if(banker != null && banker.isOnScreen()) {
+	             banker.interact("Bank", banker.getName());
+	         } else {
+	             Camera.turnTo(banker);
+	          }
+	         return;
+	    }
+	    //TODO
+	}	
 
 }
