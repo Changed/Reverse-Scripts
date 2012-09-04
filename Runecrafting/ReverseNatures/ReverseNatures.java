@@ -23,9 +23,13 @@ public class ReverseNatures extends ActiveScript implements PaintListener {
 	protected void setup() {
 		Constants.NATURE_PRICE = Util.getPrice(Constants.NATURE_RUNE);
 		Constants.ESS_PRICE = Util.getPrice(Constants.PURE_ESSENCE);
+		provide(new TeleportToBank());
 		provide(new Banking());
 		provide(new TeleportToZanaris());
-		provide(new TeleportToBank());
+		provide(new TeleportFromZanaris());
+		provide(new WalkToAltar());
+		provide(new GetInRuin());
+		provide(new CraftRunes());
 	}
 	
 	@Override
