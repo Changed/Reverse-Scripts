@@ -5,7 +5,6 @@ import java.util.Set;
 
 import org.powerbot.game.api.methods.Settings;
 import org.powerbot.game.api.methods.tab.Inventory;
-import org.powerbot.game.api.util.node.LinkedList;
 import org.powerbot.game.api.wrappers.node.Item;
 
 public class PouchHandler {
@@ -31,6 +30,10 @@ public class PouchHandler {
 			return this.id;
 		}
 		
+		public Item getItem() {
+			return Inventory.getItem(this.id);
+		}
+		
 		public int getEssCount() {
 			return Settings.get(486, this.shift, this.mask);
 		}
@@ -42,6 +45,17 @@ public class PouchHandler {
 		public boolean isFull() {
 			return getEssCount() == this.maxEss;
 		}
+	}
+	
+	public static Item getPouch() {
+		Item pouch = null;
+		for (Pouch p : Pouch.values()) {
+			if (Inventory.contains(p.getId()) && !p.isFull()) {
+				pouch = p.getItem();
+				break;
+			}
+		}
+		return pouch;
 	}
 	
 	public static Pouch[] getPouches() {
