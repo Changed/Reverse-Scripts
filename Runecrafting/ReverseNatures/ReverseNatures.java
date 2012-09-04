@@ -7,9 +7,7 @@ import org.powerbot.game.bot.event.listener.PaintListener;
 
 import util.Constants;
 import util.Util;
-import util.strategies.Banking;
-import util.strategies.TeleportToZanaris;
-import util.strategies.WalkToRing;
+import util.strategies.*;
 
 @Manifest
 (authors = { "Changed", "ArcaneSanity" }, 
@@ -30,6 +28,7 @@ public class ReverseNatures extends ActiveScript implements PaintListener {
 		provide(new Banking());
 		provide(new WalkToRing());
 		provide(new TeleportToZanaris());
+		provide(new TeleportToBank());
 	}
 	
 	@Override
