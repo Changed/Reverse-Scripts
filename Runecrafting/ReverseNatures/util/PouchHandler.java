@@ -47,6 +47,22 @@ public class PouchHandler {
 		}
 	}
 	
+	public static boolean fillPouch(final Pouch pouch) {
+		final Item item = pouch.getItem();
+		if (item != null) {
+			return item.getWidgetChild().interact("Fill", item.getName());
+		}
+		return false;
+	}
+	
+	public static boolean emptyPouch(final Pouch pouch) {
+		final Item item = pouch.getItem();
+		if (item != null) {
+			return item.getWidgetChild().interact("Empty", item.getName());
+		}
+		return false;
+	}
+	
 	public static Item getPouch() {
 		Item pouch = null;
 		for (Pouch p : Pouch.values()) {
