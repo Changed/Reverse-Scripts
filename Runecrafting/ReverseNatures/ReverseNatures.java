@@ -18,16 +18,12 @@ description = "",
 website = "http://www.powerbot.org/community")
 
 public class ReverseNatures extends ActiveScript implements PaintListener {
-
-	public static int NATURE_PRICE = 0;
-	public static int ESS_PRICE = 0;
 	
 	@Override
 	protected void setup() {
-		NATURE_PRICE = Util.getPrice(Constants.NATURE_RUNE);
-		ESS_PRICE = Util.getPrice(Constants.PURE_ESSENCE);
+		Constants.NATURE_PRICE = Util.getPrice(Constants.NATURE_RUNE);
+		Constants.ESS_PRICE = Util.getPrice(Constants.PURE_ESSENCE);
 		provide(new Banking());
-		provide(new WalkToRing());
 		provide(new TeleportToZanaris());
 		provide(new TeleportToBank());
 	}
