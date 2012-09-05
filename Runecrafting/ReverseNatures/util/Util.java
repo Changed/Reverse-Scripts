@@ -1,5 +1,6 @@
 package util;
 
+import java.awt.Image;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -21,5 +22,9 @@ public class Util {
 	        	}
 		} catch (Exception e) {}
 		return 0;
+	}
+	
+	public static Image getImage() {
+		return null;
 	}
 }

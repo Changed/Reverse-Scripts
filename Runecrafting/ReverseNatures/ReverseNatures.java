@@ -27,7 +27,7 @@ public class ReverseNatures extends ActiveScript implements PaintListener {
 		provide(new Banking());
 		provide(new TeleportToZanaris());
 		provide(new TeleportFromZanaris());
-		provide(new WalkToAltar());
+		provide(new WalkToRuin());
 		provide(new GetInRuin());
 		provide(new CraftRunes());
 	}
