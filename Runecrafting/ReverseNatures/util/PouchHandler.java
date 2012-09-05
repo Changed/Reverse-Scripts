@@ -38,6 +38,10 @@ public class PouchHandler {
 			return Settings.get(486, this.shift, this.mask);
 		}
 		
+		public int getMaxEss() {
+			return this.maxEss;
+		}
+		
 		public boolean isEmpty() {
 			return Settings.get(720, this.shift2, this.mask2) == 0;
 		}
@@ -63,15 +67,13 @@ public class PouchHandler {
 		return false;
 	}
 	
-	public static Item getPouch() {
-		Item pouch = null;
+	public static Pouch getPouch() {
 		for (Pouch p : Pouch.values()) {
 			if (Inventory.contains(p.getId()) && !p.isFull()) {
-				pouch = p.getItem();
-				break;
+				return p;
 			}
 		}
-		return pouch;
+		return null;
 	}
 	
 	public static Pouch[] getPouches() {
