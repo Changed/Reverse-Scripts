@@ -41,8 +41,7 @@ public class Banking extends Strategy implements Runnable {
 	    	if (PouchHandler.haveDegraded()) {
 	    		if (npcContact && haveNpcContactRunes()) {
 		    		//cast npc contact spell
-		    	}
-		    	else if (haveRepairPouchRunes()) {
+		    	} else if (haveRepairPouchRunes()) {
 		    		//cast repair rune pouch spell
 		    	}
 	    		return;
@@ -58,8 +57,7 @@ public class Banking extends Strategy implements Runnable {
 	            		}
 	            	}
 	            }
-	        } 
-	        else {
+	        } else {
 	            Camera.turnTo(banker);
 	        }
 	        return;
@@ -67,8 +65,7 @@ public class Banking extends Strategy implements Runnable {
 	    if (PouchHandler.haveDegraded()) {
 	    	if (npcContact) {
 	    		// withdraw runes for npc contact
-	    	}
-	    	else {
+	    	} else {
 	    		//withdraw runes for repair rune pouch
 	    	}
 	    }
@@ -83,15 +80,13 @@ public class Banking extends Strategy implements Runnable {
 	    				}
 	    				return;
 	    			}
-	    		}
-	    		else {
+	    		} else {
 	    			if (Bank.getItemCount(true, Constants.PURE_ESSENCE) > pouch.getMaxEss()) {
 	    				if (Bank.withdraw(Constants.PURE_ESSENCE, 0)) {
 		    				Time.sleep(500);
 		    				return;
 		    			}
-	    			}
-	    			else {
+	    			} else {
 	    				Context.get().getActiveScript().log.severe("Lack of pure essence, stopping script!!!");
 	    				Context.get().getActiveScript().stop();
 	    				return;
@@ -106,8 +101,7 @@ public class Banking extends Strategy implements Runnable {
 					Time.sleep(500);
 					return;
 				}
-			}
-			else {
+			} else {
 				Context.get().getActiveScript().log.severe("Lack of pure essence, stopping script!!!");
 				Context.get().getActiveScript().stop();
 				return;
